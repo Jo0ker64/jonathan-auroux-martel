@@ -44,7 +44,7 @@
         <div id="matrixWrapper"
             class="flex justify-center md:justify-start items-center min-h-[100px] md:min-h-[100px] w-full px-4">
             <div id="matrixTypewriter"
-                class="text-3xl font-extrabold text-neutralDark tracking-widest transition-all duration-300 ">
+                class="text-4xl font-opendys text-shadow-bold text-neutralDark tracking-widest transition-all duration-300 ">
                 <span id="animatedName"></span>
             </div>
         </div>
@@ -52,7 +52,7 @@
         <!-- Phrase fixe au centre -->
         <div class="absolute inset-0 justify-center items-center pointer-events-none z-10 hidden md:flex">
             <p id="centralText"
-                class="opacity-0 translate-y-4 animate-fade-slide text-center italic font-metal font-extrabold text-neutralDark transition duration-300 px-4">
+                class="opacity-0 translate-y-4 animate-fade-slide text-center text-shadow-bold italic font-opendys text-neutralDark transition duration-300 px-4">
                 Développeur atypique, créatif et radicalement humain.
             </p>
         </div>
@@ -98,6 +98,13 @@
                     <img src="./asset/image/icons/skillPurple.png" alt="Compétences" class="h-10 w-10" />
                 </div>
             </a>
+            
+            <a href="#objectif" class="group">
+                <div
+                    class="p-2 rounded-full transition duration-300 group-hover:bg-jokerGreen group-hover:shadow-[0_0_10px_#39ff14]">
+                    <img src="./asset/image/icons/objectif.png" alt="objectif" class="h-10 w-10" />
+                </div>
+            </a>
         </nav>
     </header>
     <img src="./asset/image/header.png" alt="Image de pied de page" class="w-full h-auto  object-cover object-center">
@@ -105,21 +112,30 @@
     <!------------------------------------------ MAIN ----------------------------------------------------------------------->
     <main class="p-6 max-w-7xl mx-auto space-y-24">
         <!--------------------------------------SECTION ACCUEIL-------------------------------------------------------------->
-        <section id="accueil" class="space-y-2 mt-10 ">
-            <h2 class="text-2xl font-playfair text-center">Hello ! Je suis </h2>
-            <h2 class="text-4xl font-playfair font-bold text-center text-jokerPurple uppercase">Jonathan Aka Jo0ker64
+        <section id="accueil">
+            <h2 class="text-2xl text-shadow-bold2 font-opendys text-center mt-6 mb-6">
+                Hello ! Je suis
             </h2>
-            <h2 class="text-2xl font-playfair text-center">Codeur</h2>
+
+            <h2
+                class="text-4xl text-shadow-bold2 font-opendys font-bold text-center text-jokerPurple uppercase mb-6 mt-6">
+                Jonathan
+            </h2>
+
+            <h2 class="text-2xl text-shadow-bold2 font-opendys text-center mb-6 mt-6">
+                Codeur, Développeur, Geek
+            </h2>
+
             <div class="flex justify-center">
                 <button
-                    class="bg-jokerPurple text-white px-6 py-3 mb-[50px] rounded-md shadow hover:bg-jokerGreen transition ">
+                    class="bg-jokerPurple text-white px-6 py-3 mb-10 mt-10 rounded-md shadow hover:bg-jokerGreen transition ">
                     <!-- ATTENTION :
                         Quand on utilise target="_blank", toujours ajouter : rel="noopener noreferrer"
                         - noopener : empêche la page ouverte d’avoir accès à window.opener (sécurité)
                         - noreferrer : masque la page d’origine (anonymat et sécurité)
                     -->
                     <a href="./asset/doc/CV.pdf" target="_blank" rel="noopener noreferrer"
-                        class="text-2xl font-bold font-playfair">Télécharger mon CV</a>
+                        class="text-2xl font-opendys font-bold">Télécharger mon CV</a>
                 </button>
             </div>
             <img src="./asset/image/jo0ker.png" alt="Jonathan Auroux-Martel" class="w-auto h-[550px] mx-auto  ">
@@ -129,22 +145,20 @@
         <section id="a-propos" class="space-y-4">
             <!----------------------------- BOUTONS TOGGLE ------------------------------------------------------------>
 
-            <div class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
+            <div class="absolute top-0 left-0 right-0 flex justify-between items-center mt-2 z-10 px-0">
                 <button id="btnExperience" onClick="openPopup('#popupExperience')"
-                    class="px-4 py-2 rounded-r-full bg-jokerPurple text-white text-2xl font-bold font-playfair hover:bg-jokerGreen transition">
+                    class="px-4 py-2 rounded-r-full bg-jokerPurple text-white text-2xl font-bold font-opendys hover:bg-jokerGreen transition">
                     Expériences
                 </button>
-            </div>
 
-            <div class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
                 <button id="btnFormation" onClick="openPopup('#popupFormation')"
-                    class="px-4 py-2 rounded-l-full bg-jokerPurple text-white text-2xl font-bold font-playfair hover:bg-jokerGreen transition">
+                    class="px-4 py-2 rounded-l-full bg-jokerPurple text-white text-2xl font-bold font-opendys hover:bg-jokerGreen transition">
                     Formations
                 </button>
             </div>
 
             <h2
-                class="text-3xl font-bold font-playfair text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
+                class="text-3xl font-bold font-opendys text-shadow-bold2 text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
                 À propos</h2>
 
             <!----------------------------- POPUP A PROPOS ------------------------------------------------------------>
@@ -153,52 +167,55 @@
                 aria-hidden="true" onclick="if(event.target === this) closePopup('#popupExperience')">
                 <div
                     class="bg-neutralLight dark:bg-neutralDark text-white p-8 rounded-xl shadow-xl w-full max-w-[1400px]">
-                    <h2 class="text-2xl font-bold text-jokerPurple underline mb-4">Expériences</h2>
+                    <h2 class="text-2xl font-opendys font-bold text-jokerPurple underline mb-4">Expériences</h2>
+
                     <div class="relative overflow-x-auto">
-                        <table class="table-fixed text-base text-left text-neutralLight">
+                        <table
+                            class="table-fixed w-full text-lg font-opendys text-left text-neutralLight border-separate border-spacing-x-[20px] border-spacing-y-[20px]">
                             <thead
-                                class="text-neutralDark dark:text-neutralLight font-bold bg-neutralLight dark:bg-neutralDark ">
-                                <tr
-                                    class="border-b border-jokerPurple bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
+                                class="text-neutralDark dark:text-neutralLight font-bold bg-neutralLight dark:bg-neutralDark">
+                                <tr class="border-b border-jokerPurple bg-neutralLight dark:bg-neutralDark">
                                     <th class="w-[120px]">Année</th>
                                     <th class="w-[250px]">Poste</th>
-                                    <th>Lieu</th>
-                                    <th>Description</th>
+                                    <th class="w-[290px]">Lieu</th>
+                                    <th class="w-[700px]">Description</th>
                                 </tr>
                             </thead>
                             <tbody class="text-neutralDark dark:text-neutralLight">
-                                <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <td>2024</td>
-                                    <td>Stagiaire Développeur web</td>
-                                    <td>LM Le Mées - Mées</td>
-                                    <td>Développement d'un site vitrine sous Symfony, avec une interface
-                                        administrateur pour la gestion de la carte.</td>
+                                <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10 rounded-md">
+                                    <td class="w-[120px]">2024</td>
+                                    <td class="w-[250px]">Stagiaire Développeur web</td>
+                                    <td class="w-[290px]">LM Le Mées - Mées</td>
+                                    <td class="w-[700px]">Développement d'un site vitrine sous Symfony, avec une
+                                        interface administrateur pour la gestion de la carte.</td>
                                 </tr>
                                 <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <td>2022</td>
-                                    <td>Stagiaire Développeur web</td>
-                                    <td>Mairie de Dax - Dax</td>
-                                    <td>Développement d'une application mobile sous Angular pour Dax, la Féria !</td>
+                                    <td class="w-[120px]">2022</td>
+                                    <td class="w-[250px]">Stagiaire Développeur web</td>
+                                    <td class="w-[290px]">Mairie de Dax - Dax</td>
+                                    <td class="w-[700px]">Développement d'une application mobile sous Angular pour Dax,
+                                        la Féria !</td>
                                 </tr>
                                 <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <td>2015 - 2021</td>
-                                    <td>Technicien Télécom</td>
-                                    <td>Orange - Auch</td>
-                                    <td>Installation et maintenance PABX, routeur, switch. Mise en service de ligne
-                                        cuivre et fibre.</td>
+                                    <td class="w-[120px]">2015 - 2021</td>
+                                    <td class="w-[250px]">Technicien Télécom</td>
+                                    <td class="w-[290px]">Orange - Auch</td>
+                                    <td class="w-[700px]">Installation et maintenance PABX, routeur, switch. Mise en
+                                        service
+                                        de ligne cuivre et fibre.</td>
                                 </tr>
                                 <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <td>1998 - 2014</td>
-                                    <td>Cuisine -> Apprenti à Chef </td>
-                                    <td>Divers établissements - France & Espagne</td>
-                                    <td>Gestion d'équipe, création de menus, gestion des stocks.</td>
+                                    <td class="w-[120px]">1998 - 2014</td>
+                                    <td class="w-[200px]">Cuisine -> Apprenti à Chef </td>
+                                    <td class="w-[290px]">Divers établissements - France & Espagne</td>
+                                    <td class="w-[700px]">Gestion d'équipe, création de menus, gestion des stocks.</td>
                                 </tr>
-
+                            </tbody>
                         </table>
                     </div>
 
                     <button onclick="closePopup('#popupExperience')"
-                        class="mt-2 px-4 py-2 bg-jokerGreen text-black font-semibold rounded hover:bg-green-400">
+                        class="mt-2 px-4 py-2 bg-jokerGreen text-black font-opendys rounded hover:bg-green-400">
                         Fermer
                     </button>
                 </div>
@@ -209,55 +226,62 @@
                 aria-hidden="true" onclick="if(event.target === this) closePopup('#popupFormation')">
                 <div
                     class="bg-neutralLight dark:bg-neutralDark text-white p-8 rounded-xl shadow-xl w-full max-w-[1400px]">
-                    <h2 class="text-2xl font-bold text-jokerPurple underline mb-4">Formations</h2>
-                    <div class="relative overflow-x-auto">
-                        <table class="table-fixed text-base text-left text-neutralLight">
+                    <h2 class="text-2xl font-opendys font-bold text-jokerPurple underline mb-4">Formations</h2>
+                    <div class="absolute overflow-x-auto">
+                        <table
+                            class="table-fixed w-full text-lg font-opendys text-left text-neutralLight border-separate border-spacing-x-[20px] border-spacing-y-[20px]">
                             <thead
                                 class="text-neutralDark dark:text-neutralLight font-bold bg-neutralLight dark:bg-neutralDark ">
                                 <tr
                                     class="border-b border-jokerPurple bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <th class="w-[120px]">Année</th>
-                                    <th class="w-[480px]">Titre</th>
-                                    <th class="w-[300px]">Centre - Lieu</th>
-                                    <th class="w-[500px]">Description</th>
+                                    <th class="w-[140px]">Année</th>
+                                    <th class="w-[400px]">Titre</th>
+                                    <th class="w-[340px]">Centre - Lieu</th>
+                                    <th class="w-[560px]">Description</th>
                                 </tr>
                             </thead>
                             <tbody class="text-neutralDark dark:text-neutralLight">
                                 <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <td>2024 - 2025</td>
-                                    <td>Concepteur développeur d'application</td>
-                                    <td>AFPA - Mont-de-Marsan</td>
-                                    <td>Bac +3/4 </td>
+                                    <td class="w-[140px]">2024 - 2025</td>
+                                    <td class="w-[400px]">Concepteur développeur d'application</td>
+                                    <td class="w-[340px]">AFPA - Mont-de-Marsan</td>
+                                    <td class="w-[560px]">Bac +3/4 </td>
                                 </tr>
                                 <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <td>2024</td>
-                                    <td>Développeur web & web mobile</td>
-                                    <td>ACGD Formation - Angoumé</td>
-                                    <td>Bac +2 </td>
+                                    <td class="w-[140px]">2024</td>
+                                    <td class="w-[400px]">Développeur web & web mobile</td>
+                                    <td class="w-[340px]">ACGD Formation - Angoumé</td>
+                                    <td class="w-[560px]">Titre validé Bac +2 </td>
                                 </tr>
                                 <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <td>2022</td>
-                                    <td>Développeur web & web mobile</td>
-                                    <td>AEN - Agen</td>
-                                    <td></td>
+                                    <td class="w-[140px]">2022</td>
+                                    <td class="w-[400px]">Développeur web & web mobile</td>
+                                    <td class="w-[340px]">AEN - Agen</td>
+                                    <td class="w-[560px]">Titre non validé</td>
                                 </tr>
                                 <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <td>2016</td>
-                                    <td>Technicien réseaux et télécommunications d'entreprise/td>
-                                    <td>AFPA / Orange - Toulouse</td>
-                                    <td>Bac +2</td>
+                                    <td class="w-[140px]">2016</td>
+                                    <td class="w-[400px]">Technicien réseaux et télécommunications d'entreprise</td>
+                                    <td class="w-[340px]">AFPA / Orange - Toulouse</td>
+                                    <td class="w-[560px]">Titre validé Bac +2</td>
                                 </tr>
                                 <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
-                                    <td>2012 - 2014</td>
-                                    <td>BTS Système Numérique option A - Informatique et Réseaux</td>
-                                    <td>CNED - À distance</td>
-                                    <td>Diplôme non validé car aucun stage validé</td>
+                                    <td class="w-[140px]">2012 - 2014</td>
+                                    <td class="w-[400px]">BTS Système Numérique option A - Informatique et Réseaux</td>
+                                    <td class="w-[340px]">CNED - À distance</td>
+                                    <td class="w-[560px]">Diplôme non validé</td>
                                 </tr>
+                                <tr class="bg-neutralLight dark:bg-neutralDark hover:bg-neutralGreen/10">
+                                    <td class="w-[140px]">2007 </td>
+                                    <td class="w-[400px]">Technicien assistance en informatique</td>
+                                    <td class="w-[340px]">AFPA - Bègles</td>
+                                    <td class="w-[560px]">Titre validé Bac</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
-
-                    <button onclick="closePopup('#popupExperience')"
-                        class="mt-2 px-4 py-2 bg-jokerGreen text-black font-semibold rounded hover:bg-green-400">
+                    <button onclick="closePopup('#popupFormation')"
+                        class="mt-2 px-4 py-2 bg-jokerGreen text-black font-opendys font-semibold rounded hover:bg-green-400">
                         Fermer
                     </button>
                 </div>
@@ -267,7 +291,7 @@
 
             <p class="text-xl font-opendys leading-relaxed">
                 Je n'ai pas un parcours lisse. Je n'ai pas coché toutes les cases. Et tu sais quoi ?
-                <span class="text-xl font-bold text-jokerGreen">Tant mieux.</span>
+                <span class="text-xl font-opendys font-bold text-jokerGreen">Tant mieux.</span>
             </p>
             <p class="text-xl font-opendys leading-relaxed">
                 Pendant 15 ans, j’ai travaillé en cuisine, sous pression, dans la chaleur et le bruit. J'ai acquis des
@@ -301,18 +325,18 @@
                 Je suis atypique. Et je le revendique. J’apprends vite, je pense autrement, parfois à l’envers, mais
                 toujours avec sens. Je doute souvent, j’avance toujours. Je ne suis pas formaté, je suis façonné.
             </p>
-            <p class="text-lg font-opendys leading-relaxed font-semibold text-jokerGreen">
+            <p class="text-2xl font-opendys leading-relaxed font-semibold text-jokerGreen">
                 Je veux construire. Pas juste des applis, mais des ponts. Entre les gens, entre les idées, entre les
                 mondes.
             </p>
-            <p class="text-sm font-opendys leading-relaxed font-bold italic text-jokerGreen">
+            <p class="text-3xl font-opendys leading-relaxed font-bold italic text-jokerGreen">
                 Si t’as lu jusqu’ici, t’as déjà compris que je suis pas là pour faire semblant.
             </p>
         </section>
 
         <section id="dispo" class="space-y-4">
             <h2
-                class="text-3xl font-playfair font-bold text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
+                class="text-3xl font-opendys text-shadow-bold2 font-bold text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
                 Disponibilité & Objectifs</h2>
             <p class="text-xl font-opendys leading-relaxed">
                 Actuellement en fin de formation CDA, je suis <strong>disponible pour une alternance</strong> dans le
@@ -325,15 +349,14 @@
             <p class="text-xl font-opendys leading-relaxed">
                 Passionné par le <strong>développement back-end</strong>, je cherche à rejoindre une équipe où l’on code
                 avec rigueur… sans se prendre trop au sérieux. Curieux et polyvalent, je reste également ouvert aux
-                missions
-                <strong>front-end</strong> quand le projet le mérite.
+                missions front-end quand le projet le mérite.
             </p>
         </section>
 
         <!-- SECTION PORJETS / PORTFOLIO -->
         <section id="projets" class="space-y-4">
             <h2
-                class="text-3xl font-bold font-playfair text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
+                class="text-3xl font-bold font-opendys text-shadow-bold2 text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
                 Mes Projets
             </h2>
 
@@ -358,22 +381,27 @@
                                     onclick="openPopup('#popupApp')"
                                     class="w-full h-40 object-cover rounded-md mb-4 cursor-pointer">
                                 <div class="space-y-2">
-                                    <h3 class="text-2xl font-bold text-jokerGreen">IdentyQuest</h3>
-                                    <p class="text-lg text-neutralDark dark:text-neutralLight italic">Application
+                                    <h3 class="text-3xl font-playfair font-bold text-jokerGreen">IdentyQuest</h3>
+                                    <p class="text-2xl font-opendys  text-neutralDark dark:text-neutralLight italic">
+                                        Application
                                         d'exploration identitaire & neurodivergence</p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300"><strong>🛠️ Stack
+                                    <p class="text-lg font-opendys  text-neutral-700 dark:text-neutral-300"><strong>🛠️
+                                            Stack
                                             :</strong> Flutter (Front), Spring Boot (API), MySQL.</p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300"><strong>🎯 Objectif
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300"><strong>🎯
+                                            Objectif
                                             :</strong> Offrir un espace sécurisé pour suivre ses émotions, ses
                                         rendez-vous et explorer son identité personnelle & neuroatypique.</p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300"><strong>📚 Ce que j'ai
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300"><strong>📚 Ce
+                                            que j'ai
                                             appris :</strong> Connexion Flutter ↔ Spring Boot, conception d'API
                                         RESTful,
                                         gestion des DTOs, base de données relationnelle, responsive UI.</p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300"><strong>🧩 Contexte
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300"><strong>🧩
+                                            Contexte
                                             :</strong> Né d’un besoin personnel, ce projet a été entièrement pensé,
                                         designé et développé par mes soins.</p>
-                                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                                    <div class="pt-2 flex flex-wrap gap-4 text-base font-opendys font-medium">
                                         <a href="https://github.com/Jo0ker64/identyQuest" target="_blank"
                                             class="text-jokerGreen transition">🔗 GitHub</a>
                                         <a href="#" target="_blank" class="text-jokerGreen transition">🚀 Démo</a>
@@ -384,43 +412,33 @@
 
                         <!--PROJET 2 -->
                         <div class="min-w-full p-6">
-                            <!-- CARTE PROJET -->
                             <div
                                 class="bg-neutralLight dark:bg-neutralDark border border-jokerPurple/50 hover:border-jokerPurple hover:shadow-[0_0_40px_rgba(138,43,226,0.35)] p-6 rounded-xl transition duration-300 hover:scale-[1.02]">
-                                <!-- IMAGE CLIQUABLE -->
                                 <img src="./asset/image/sites/biblioclic.png" alt="Aperçu Bibli'o"
                                     onclick="openPopup('#popupBiblio')"
                                     class="w-full h-40 object-cover rounded-md mb-4 cursor-pointer">
-                                <!-- INFOS PROJET -->
                                 <div class="space-y-2">
-                                    <h3 class="text-2xl font-bold text-jokerGreen">Bibli'o</h3>
-                                    <p class="text-lg text-neutralDark dark:text-neutralLight italic">
+                                    <h3 class="text-3xl font-playfair font-bold text-jokerGreen">Bibli'o</h3>
+                                    <p class="text-2xl font-opendys text-neutralDark dark:text-neutralLight italic">
                                         Application de gestion de bibliothèque locale.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>🛠️ Stack :</strong> Java 21, Swing, H2 Database.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>🎯 Objectif :</strong> Permettre à un bibliothécaire de suivre les
-                                        livres,
-                                        les
-                                        emprunts/retours et les utilisateurs.
+                                        livres, les emprunts/retours et les utilisateurs.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>📚 Ce que j'ai appris :</strong> Utilisation avancée de Java Swing,
-                                        design
-                                        MVC,
-                                        gestion CRUD en local, bonus avec JavaFX pour interface moderne.
+                                        design MVC, gestion CRUD en local, bonus avec JavaFX pour interface moderne.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>🧩 Contexte :</strong> Application développée dans le cadre de ma
-                                        formation
-                                        CDA
-                                        afin
-                                        d’illustrer mes compétences techniques dans le dossier professionnel.
+                                        formation CDA afin d’illustrer mes compétences techniques dans le dossier
+                                        professionnel.
                                     </p>
-                                    <!-- LIENS -->
-                                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                                    <div class="pt-2 flex flex-wrap gap-4 text-base font-opendys font-medium">
                                         <a href="#" target="_blank" class="text-jokerGreen transition">🔗 GitHub</a>
                                         <a href="#" target="_blank" class="text-jokerGreen transition">📂 Pas de
                                             démo publique</a>
@@ -431,39 +449,33 @@
 
                         <!-- Projet 3 : LM Le Mées -->
                         <div class="min-w-full p-6">
-                            <!-- CARTE PROJET -->
                             <div
                                 class="bg-neutralLight dark:bg-neutralDark border border-jokerPurple/50 hover:border-jokerPurple hover:shadow-[0_0_40px_rgba(138,43,226,0.35)] p-6 rounded-xl transition duration-300 hover:scale-[1.02]">
-                                <!-- IMAGE CLIQUABLE -->
-                                <img src="./asset/image/sites/LMclic.png" alt="Aperçu LM Le Mées" onclick="openPopup('#popupLM')"
+                                <img src="./asset/image/sites/LMclic.png" alt="Aperçu LM Le Mées"
+                                    onclick="openPopup('#popupLM')"
                                     class="w-full h-40 object-cover rounded-md mb-4 cursor-pointer">
-                                <!-- INFOS PROJET -->
                                 <div class="space-y-2">
-                                    <h3 class="text-2xl font-bold text-jokerGreen">LM Le Mées</h3>
-                                    <p class="text-lg text-neutralDark dark:text-neutralLight italic">
+                                    <h3 class="text-3xl font-playfair font-bold text-jokerGreen">LM Le Mées</h3>
+                                    <p class="text-2xl font-opendys text-neutralDark dark:text-neutralLight italic">
                                         Site vitrine réalisé pour une boulangerie - snacking.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>🔧 Stack :</strong> Symfony 7, Twig, CSS3, MySQL.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>🎯 Objectif :</strong> Mettre en valeur les produits, la carte et
-                                        l’identité
-                                        visuelle de la boulangerie.
+                                        l’identité visuelle de la boulangerie.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>📚 Ce que j'ai appris :</strong> Mise en place d'un CRUD,
-                                        sécurisation de
-                                        formulaire, intégration avec Twig, upload d’images.
+                                        sécurisation de formulaire, intégration avec Twig, upload d’images.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>🧩 Contexte :</strong> Projet réalisé de manière totalement autonome
-                                        durant
-                                        mon
-                                        stage Développeur Web & Web Mobile, sans encadrement technique direct.
+                                        durant mon stage Développeur Web & Web Mobile, sans encadrement technique
+                                        direct.
                                     </p>
-                                    <!-- LIENS -->
-                                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                                    <div class="pt-2 flex flex-wrap gap-4 text-base font-opendys font-medium">
                                         <a href="#" target="_blank" class="text-jokerGreen   transition">🔗
                                             GitHub</a>
                                         <!--mettre adresse du depot-->
@@ -476,41 +488,33 @@
 
                         <!----PROJET 4 ------->
                         <div class="min-w-full p-6">
-                            <!-- CARTE PROJET -->
                             <div
                                 class="bg-neutralLight dark:bg-neutralDark border border-jokerPurple/50 hover:border-jokerPurple hover:shadow-[0_0_40px_rgba(138,43,226,0.35)] p-6 rounded-xl transition duration-300 hover:scale-[1.02]">
-                                <!-- IMAGE CLIQUABLE -->
                                 <img src="./asset/image/sites/geekclic.png" alt="Aperçu GeekUniverse"
                                     onclick="openPopup('#popupGeek')"
                                     class="w-full h-40 object-cover rounded-md mb-4 cursor-pointer">
-                                <!-- INFOS PROJET -->
                                 <div class="space-y-2">
-                                    <h3 class="text-2xl font-bold text-jokerGreen">GeekUniverse</h3>
-                                    <p class="text-lg text-neutralDark dark:text-neutralLight italic">
+                                    <h3 class="text-3xl font-playfair font-bold text-jokerGreen">GeekUniverse</h3>
+                                    <p class="text-2xl font-opendys text-neutralDark dark:text-neutralLight italic">
                                         Application web de gestion de bibliothèque sur le thème geek.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>🔧 Stack :</strong> Symfony 7, Twig, CSS3, MySQL
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>🎯 Objectif :</strong>Développer une base de gestion de prêts,
-                                        lecteurs et
-                                        catalogue, avec une interface admin simple, un public geek.
+                                        lecteurs et catalogue, avec une interface admin simple, un public geek.
 
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>📚 Ce que j'ai appris :</strong> Mise en œuvre d’un projet complet
-                                        Symfony
-                                        en
-                                        autonomie, conception CRUD, gestion du thème, sécurisation de routes.
+                                        Symfony en autonomie, conception CRUD, gestion du thème, sécurisation de routes.
                                     </p>
-                                    <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                    <p class="text-lg font-opendys text-neutral-700 dark:text-neutral-300">
                                         <strong>🧩 Contexte :</strong> Développée comme projet de fin de formation
-                                        DWWM,
-                                        cette
-                                        application est une vitrine concrète de mon savoir-faire fullstack.
+                                        DWWM, cette application est une vitrine concrète de mon savoir-faire fullstack
+                                        acquis lors de la formation DWWM.
                                     </p>
-                                    <!-- LIENS -->
-                                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                                    <div class="pt-2 flex flex-wrap gap-4 text-base font-opendys font-medium">
                                         <a href="#" target="_blank" class="text-jokerGreen   transition">🔗
                                             GitHub</a>
                                         <!--mettre adresse du depot-->
@@ -531,7 +535,7 @@
                         <img src="./asset/image/sites/appFull.png" alt="Aperçu complet IdentyQuest"
                             class="w-full h-auto max-h-[70vh] object-contain rounded mb-4">
                         <button onclick="closePopup('#popupApp')"
-                            class="mt-2 px-4 py-2 bg-jokerGreen text-black font-semibold rounded hover:bg-green-400">
+                            class="mt-2 px-4 py-2 bg-jokerGreen text-black text-lg font-opendys font-semibold rounded hover:bg-green-400">
                             Fermer
                         </button>
                     </div>
@@ -543,7 +547,7 @@
                         <img src="./asset/image/sites/bibliofull.png" alt="Aperçu complet Bibli'o"
                             class="w-full h-auto max-h-[70vh] object-contain rounded mb-4">
                         <button onclick="closePopup('#popupBiblio')"
-                            class="mt-2 px-4 py-2 bg-jokerGreen text-black font-semibold rounded hover:bg-green-400">
+                            class="mt-2 px-4 py-2 bg-jokerGreen text-black text-lg font-opendys font-semibold rounded hover:bg-green-400">
                             Fermer
                         </button>
                     </div>
@@ -555,7 +559,7 @@
                         <img src="./asset/image/sites/LM.png" alt="Aperçu complet LM Le Mées"
                             class="w-full h-auto max-h-[70vh] object-contain rounded mb-4">
                         <button onclick="closePopup('#popupLM')"
-                            class="mt-2 px-4 py-2 bg-jokerGreen text-black font-semibold rounded hover:bg-green-400">
+                            class="mt-2 px-4 py-2 bg-jokerGreen text-black text-lg font-opendys font-semibold rounded hover:bg-green-400">
                             Fermer
                         </button>
                     </div>
@@ -567,7 +571,7 @@
                         <img src="./asset/image/sites/geekuniverse.png" alt="Aperçu complet GeekUniverse"
                             class="w-full h-auto max-h-[70vh] object-contain rounded mb-4">
                         <button onclick="closePopup('#popupGeek')"
-                            class="mt-2 px-4 py-2 bg-jokerGreen text-black font-semibold rounded hover:bg-green-400">
+                            class="mt-2 px-4 py-2 bg-jokerGreen text-black text-lg font-opendys font-semibold rounded hover:bg-green-400">
                             Fermer
                         </button>
                     </div>
@@ -575,7 +579,7 @@
             </div>
             <div class="flex justify-center space-y-2 mt-6">
                 <button
-                    class="bg-jokerPurple text-white font-bold px-6 py-3 rounded-md shadow hover:bg-jokerGreen transition ">
+                    class="bg-jokerPurple text-white text-2xl font-opendys font-bold px-6 py-3 rounded-md shadow hover:bg-jokerGreen transition ">
                     <a href="https://github.com/Jo0ker64" target="_blank" rel="noopener noreferrer">Lien
                         vers mon Github</a>
                 </button>
@@ -586,7 +590,7 @@
         <!-- SECTION COMPETENCES -->
         <section id="competences" class="space-y-8 mt-20">
             <h2
-                class="text-3xl font-bold font-playfair text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
+                class="text-3xl font-bold font-opendys text-shadow-bold2 text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
                 Compétences</h2>
             <div class="relative max-w-4xl mx-auto">
                 <button onclick="slideSkills(-1)"
@@ -602,11 +606,11 @@
                     <div id="skillsSlider" class="flex transition-transform duration-500">
                         <!--FRONT-->
                         <div class="min-w-full p-6">
-                            <div class="flex flex-col gap-6 text-center text-lg">
+                            <div class="flex flex-col gap-6 text-center text-2xl font-opendys">
                                 <div class="bg-neutralLight dark:bg-neutralDark border border-jokerGreen/30 hover:border-jokerGreen/30 
                     hover:shadow-[0_0_30px_rgba(57,255,20,0.35)] p-6 rounded-xl transition duration-300">
-                                    <h3 class="text-jokerGreen font-bold text-xl mb-4 text-center">Front - end</h3>
-                                    <div class="flex flex-wrap gap-6 justify-center">
+                                    <h3 class="text-jokerGreen font-opendys text-xl mb-4 text-center">Front - end</h3>
+                                    <div class="flex flex-wrap gap-6 justify-center ">
                                         <div>
                                             <canvas id="skillsFront" class="w-[500px] h-[500px]"></canvas>
                                         </div>
@@ -617,7 +621,7 @@
 
                         <!--BACK-->
                         <div class="min-w-full p-6">
-                            <div class="flex flex-col gap-6 text-center text-lg">
+                            <div class="flex flex-col gap-6 text-center text-2xl font-opendys">
                                 <div class="bg-neutralLight dark:bg-neutralDark border border-jokerGreen/30 hover:border-jokerGreen/30 
                     hover:shadow-[0_0_30px_rgba(57,255,20,0.35)] p-6 rounded-xl transition duration-300">
                                     <h3 class="text-jokerGreen font-bold text-xl mb-4 text-center">Back - end</h3>
@@ -664,42 +668,12 @@
 
 
 
-        <section id="progression" class="space-y-4">
+        <section id="objectif" class="space-y-4">
             <div class="bg-neutralLight dark:bg-neutralDark p-6 rounded-xl space-y-6">
                 <h2
-                    class="text-3xl font-bold font-playfair text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
-                    Mon parcours</h2>
-
-                <ol class="border-l-4 border-jokerPurple space-y-4 pl-6">
-                    <li>
-                        <div class="text-xl font-opendys leading-relaxed">🧑‍🍳 1998 - 2013</div>
-                        <p class="text-2xl font-opendys leading-relaxed">Carrière en cuisine, jusqu'au poste de chef</p>
-                    </li>
-                    <li>
-                        <div class="text-xl font-opendys leading-relaxed">📡 2015 - 2021</div>
-                        <p class="text-2xl font-opendys leading-relaxed">Technicien télécom chez Orange (cuivre & fibre)
-                        </p>
-                    </li>
-                    <li>
-                        <div class="text-xl font-opendys leading-relaxed">💻 2022</div>
-                        <p class="text-2xl font-opendys leading-relaxed">Début de reconversion vers le développement web
-                        </p>
-                    </li>
-                    <li>
-                        <div class="text-xl font-opendys leading-relaxed">🎓 2023 - 2025</div>
-                        <p class="text-2xl font-opendys leading-relaxed">Formation DWWM puis CDA (AFPA + projets pro)
-                        </p>
-                    </li>
-                    <li>
-                        <div class="text-xl font-opendys leading-relaxed">🚀 2025</div>
-                        <p class="text-2xl font-opendys leading-relaxed">Préparation du Mastère Expert Dev chez <a
-                                href="https://www.eni-ecole.fr" target="_blank" class="text-jokerPurple underline">ENI
-                                École</a></p>
-                    </li>
-                </ol>
-
+                    class="text-3xl font-bold font-opendys text-jokerPurple hover:text-jokerGreen transition uppercase underline underline-offset-8">
+                    Mes objectifs</h2>
                 <div class="mt-6 space-y-3">
-                    <h3 class="text-2xl font-bold text-jokerGreen">🎯 Objectifs à court / moyen terme</h3>
                     <ol class=" border-jokerPurple space-y-4 pl-6">
                         <li class="text-xl font-opendys leading-relaxed">✔️ Valider mon titre CDA et intégrer un Mastère
                             Dev</li>
@@ -748,4 +722,5 @@
     <script src="./asset/JS/radar.js" defer></script>
     <script src="./asset/JS/slider.js" defer></script>
 </body>
+
 </html>

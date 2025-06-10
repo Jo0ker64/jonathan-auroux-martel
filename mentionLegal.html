@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="dark">
 
 <head>
     <meta charset="UTF-8" />
@@ -17,7 +17,7 @@
 
 
     <link rel="shortcut icon" href="./asset/image/joker.png" type="image/x-icon">
-    <title>Mentions légales - Jonathan Auroux-Martel</title>
+    <title>Portfolio de Jonathan</title>
 
     <link rel="stylesheet" href="/asset/CSS/style.css">
     <link rel="stylesheet" href="dist/style.css" />
@@ -34,14 +34,17 @@
 
 </head>
 
-<body class="bg-neutralDark text-jokerWhite">
+<!------------------------------------------ BODY DE MON HTML ------------------------------------------------------------->
+
+<body class="bg-neutralLight text-neutralDark dark:bg-neutralDark dark:text-neutralLight font-sans">
+    <!------------------------------------------ HEADER ----------------------------------------------------------------------->
     <header class="p-6 flex flex-col md:flex-row justify-between items-center bg-jokerGreen relative">
 
         <!-- Animation Texte en haut à gauche-->
         <div id="matrixWrapper"
             class="flex justify-center md:justify-start items-center min-h-[100px] md:min-h-[100px] w-full px-4">
             <div id="matrixTypewriter"
-                class="text-3xl font-extrabold text-neutralDark tracking-widest transition-all duration-300 ">
+                class="text-4xl font-opendys text-shadow-bold text-neutralDark tracking-widest transition-all duration-300 ">
                 <span id="animatedName"></span>
             </div>
         </div>
@@ -49,7 +52,7 @@
         <!-- Phrase fixe au centre -->
         <div class="absolute inset-0 justify-center items-center pointer-events-none z-10 hidden md:flex">
             <p id="centralText"
-                class="opacity-0 translate-y-4 animate-fade-slide text-center italic font-metal font-extrabold text-neutralDark transition duration-300 px-4">
+                class="opacity-0 translate-y-4 animate-fade-slide text-center text-shadow-bold italic font-opendys text-neutralDark transition duration-300 px-4">
                 Développeur atypique, créatif et radicalement humain.
             </p>
         </div>
@@ -68,7 +71,6 @@
         <!-----------------------------------------------NAVBAR SCROLL----------------------------------------------------------------->
         <nav
             class="hidden sm:flex fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-neutralDark/80 dark:bg-neutralLight/10 backdrop-blur-md px-6 py-3 rounded-full justify-between items-center gap-6 shadow-xl">
-
             <a href="index.html#accueil" class="group">
                 <div
                     class="p-2 rounded-full transition duration-300 group-hover:bg-jokerGreen group-hover:shadow-[0_0_10px_#39ff14]">
@@ -96,12 +98,19 @@
                     <img src="./asset/image/icons/skillPurple.png" alt="Compétences" class="h-10 w-10" />
                 </div>
             </a>
+
+            <a href="index.html#objectif" class="group">
+                <div
+                    class="p-2 rounded-full transition duration-300 group-hover:bg-jokerGreen group-hover:shadow-[0_0_10px_#39ff14]">
+                    <img src="./asset/image/icons/objectif.png" alt="objectif" class="h-10 w-10" />
+                </div>
+            </a>
         </nav>
     </header>
     <img src="./asset/image/header.png" alt="Image de pied de page" class="w-full h-auto  object-cover object-center">
 
     <main class="p-6 max-w-7xl mx-auto space-y-24">
-        <h1 class="text-4xl font-playfair font-bold text-jokerPurple mb-6">Mentions légales</h1>
+        <h1 class="text-4xl font-opendys font-bold text-jokerPurple mb-6">Mentions légales</h1>
         <section class="space-y-4">
 
             <h2 class="text-2xl font-opendys leading-relaxed">Éditeur du site :</h2>
