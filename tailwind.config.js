@@ -27,7 +27,7 @@ module.exports = {
       fontFamily: {
         cinzel: ['"Cinzel"', 'serif'],
         playfair:["Playfair", "serif"],
-        opendys: ['OpenDys', 'sans-serif']
+        opendys: ['OpenDyslexic', 'sans-serif']
       }
     }
 
